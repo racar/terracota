@@ -24,7 +24,7 @@ gem 'spree_paypal_express',   :git => 'git://github.com/spree/spree_paypal_expre
 gem 'spree_active_shipping',  :git => 'git://github.com/spree/spree_active_shipping.git'
 gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git'
 
-gem 'spree_rdr_theme', :path => '../spree_rdr_theme' # :git => 'git://github.com/spree/spree_rdr_theme.git'
+gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
 gem 'capistrano'
 
 group :assets do
