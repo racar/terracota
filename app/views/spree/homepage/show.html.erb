@@ -29,10 +29,10 @@
   <nav id="banner-nav">
     <ul>
       <li class="first"><a href="#">&laquo;</a></li>
-      <li class="current" id="b1_handle" ><a href="#">new arrivals</a></li>
-      <li id="b2_handle"><a href="#">car stereos</a></li>
-      <li id="b3_handle"><a href="#">accessory sale</a></li>
-      <li id="b4_handle"><a href="#">clearance event</a></li>
+      <li class="current" id="b1_handle" ><a href="#">Novedades</a></li>
+      <li id="b2_handle"><a href="#">Cesteria</a></li>
+      <li id="b3_handle"><a href="#">Weguer</a></li>
+      <li id="b4_handle"><a href="#">Guadua</a></li>
       <li class="last"><a href="#">&raquo;</a></li>
     </ul>
   </nav>
@@ -41,6 +41,30 @@
 
 
 <div id="taxons" class="clearfix">
+	<div class="taxon">
+		<h3>Cesteria</h3>
+	 <%= image_tag("store/homepage/taxons/slingbox.jpg", :class => "image", :alt =>"algo") %><br>
+	 <%= link_to 'View More', '', :class => 'button' %>
+	 </div>
+	 <div class="taxon">
+	 	<h3>Weguer</h3>
+     <%= image_tag("store/homepage/taxons/slingbox.jpg", :class => "image", :alt =>"algo") %> 
+     <%= link_to 'View More', '', :class => 'button' %>
+     </div>
+      <div class="taxon">
+      	<h3>Guadua</h3>
+     <%= image_tag("store/homepage/taxons/slingbox.jpg", :class => "image", :alt =>"algo") %> 
+     <%= link_to 'View More', '', :class => 'button' %>
+     </div>
+     <div class="taxon">
+		<h3>Cesteria</h3>
+	 <%= image_tag("store/homepage/taxons/slingbox.jpg", :class => "image", :alt =>"algo") %><br>
+	 <%= link_to 'View More', '', :class => 'button' %>
+	 </div>
+	
+	<% @product_groups.each do |group| %>
+	puts group.permalink
+	<%end%>
   <% @product_groups.each do |group| %>
     <% url = pg_search_path(:product_group_name => group.permalink) %>
     <div class="taxon">
@@ -54,7 +78,7 @@
 </div>
 
 <div id="all-products" class="list-box">
-  <h2>All Products</h2>
+  <h2>Otros Productos</h2>
   <div class="left">
     <ul>
       <% @taxons.each_with_index do |taxon,i| %>
@@ -76,22 +100,20 @@
 <div id="contact">
   <div>
     <h2>Contact Us</h2>
-    <p class="phone">(301) 560-2000</p>
-    <p><a href="mailto:sales@railsdogradio.com" class="email">sales@railsdogradio.com</a>
+    <p class="phone">(2) 89822**</p>
+    <p><a href="mailto:sales@terracota.com" class="email">sales@terracota.com</a>
     <table>
       <tr>
-        <td>Mon-Fri</td> <td>10am - 6pm CST</td>
+        <td>Mon-Fri</td> <td>8am - 6pm</td>
       </tr>
       <tr>
-        <td>Sat</td> <td>10am - 4pm CST</td>
+        <td>Sat</td> <td>8am - 12pm </td>
       </tr>
-      <tr>
-        <td>Sun</td> <td>CLOSED</td>
-      </tr>
+      
     </table>
   </div>
 </div>
-
+<!--
 <% if tracker = Spree::Tracker.current %>
   <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
@@ -103,4 +125,4 @@
     pageTracker._initData();
     pageTracker._trackPageview('/demo_launch');
   </script>
-<% end %>
+<% end %> -->
