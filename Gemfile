@@ -4,11 +4,11 @@ source 'http://rubygems.org'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'rails', '3.2.6'
-gem 'mysql2'
+
 
 
 group :production do
-  gem 'pg'
+  gem 'mysql2'
 end        
 
 group :development, :test do
