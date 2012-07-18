@@ -5,15 +5,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.6'
 
-
-
-group :production do
-  gem 'mysql2'
-end        
-
-group :development, :test do
-  gem 'mysql2'
-end
 gem 'aws-sdk'
 gem 'airbrake'
 
@@ -52,6 +43,7 @@ group :development, :test do
   gem "capybara", "= 0.4.0"
   #gem 'ruby-debug'
   gem "launchy", ">= 0.3.7"
+  gem 'mysql2'
 end
 
 group :production do
@@ -59,6 +51,7 @@ group :production do
   gem 'unicorn'
   gem 'therubyracer'
   gem 'newrelic_rpm'
+  gem 'pg'
 end
 
 gem 'deface', :git => 'git://github.com/railsdog/deface.git'
