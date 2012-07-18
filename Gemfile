@@ -12,7 +12,7 @@ group :production do
 end        
 
 group :development, :test do
-  gem 'sqlite3'
+  gem 'mysql2'
 end
 gem 'aws-sdk'
 gem 'airbrake'
