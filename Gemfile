@@ -11,7 +11,7 @@ gem 'airbrake'
 gem 'spree', '1.1.2.rc1'
 
 gem 'spree_recently_viewed', :git => 'git://github.com/spree/spree_recently_viewed.git'
-gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
+#gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
 gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git'
 #gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git'
 
@@ -25,8 +25,8 @@ gem 'active_shipping', :git => 'git://github.com/Shopify/active_shipping.git'
 
 gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
 gem 'spree_rdr_theme', :git => 'git://github.com/spree/spree_rdr_theme.git'
-gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
-gem 'spree_product_groups', :git => 'git://github.com/spree/spree_product_groups.git'
+#gem 'spree_related_products', :git => 'git://github.com/spree/spree_related_products.git'
+#gem 'spree_product_groups', :git => 'git://github.com/spree/spree_product_groups.git'
 
 gem 'capistrano'
 
