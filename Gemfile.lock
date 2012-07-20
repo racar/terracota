@@ -33,15 +33,6 @@ GIT
       tinymce-rails (>= 3.4.7.0.1)
 
 GIT
-  remote: git://github.com/spree/spree_email_to_friend.git
-  revision: 4a454f12929862cf3d624fefa8a6ca970674e244
-  specs:
-    spree_email_to_friend (1.2)
-      recaptcha (>= 0.3.1)
-      spree_auth (>= 1.0.0)
-      spree_core (>= 1.0.0)
-
-GIT
   remote: git://github.com/spree/spree_paypal_express.git
   revision: d48f4649506e876b88244dcb4e5a86250e4ef8f0
   specs:
@@ -323,7 +314,6 @@ GEM
       polyamorous (~> 0.5.0)
     rdoc (3.12)
       json (~> 1.4)
-    recaptcha (0.3.4)
     rspec (2.10.0)
       rspec-core (~> 2.10.0)
       rspec-expectations (~> 2.10.0)
@@ -442,7 +432,6 @@ DEPENDENCIES
   spree (= 1.1.2.rc1)
   spree_active_shipping!
   spree_editor!
-  spree_email_to_friend!
   spree_paypal_express!
   spree_product_groups!
   spree_rdr_theme!
