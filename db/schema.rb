@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120228144316) do
+ActiveRecord::Schema.define(:version => 20120723054760) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(:version => 20120228144316) do
     t.string   "viewable_type",           :limit => 50
     t.string   "attachment_content_type"
     t.string   "attachment_file_name"
-    t.integer  "attachment_size"
+    t.integer  "attachment_file_size"
     t.integer  "position"
     t.string   "type",                    :limit => 75
     t.datetime "attachment_updated_at"
@@ -516,9 +516,10 @@ ActiveRecord::Schema.define(:version => 20120228144316) do
     t.boolean  "match_none"
     t.boolean  "match_all"
     t.boolean  "match_one"
+    t.datetime "deleted_at"
   end
 
-  create_table "spree_state_events", :force => true do |t|
+  create_table "spree_state_changes", :force => true do |t|
     t.integer  "stateful_id"
     t.integer  "user_id"
     t.string   "name"
@@ -546,7 +547,7 @@ ActiveRecord::Schema.define(:version => 20120228144316) do
 
   create_table "spree_tax_rates", :force => true do |t|
     t.integer  "zone_id"
-    t.decimal  "amount",            :precision => 8, :scale => 4
+    t.decimal  "amount",            :precision => 8, :scale => 5
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "tax_category_id"
@@ -617,8 +618,8 @@ ActiveRecord::Schema.define(:version => 20120228144316) do
     t.string   "persistence_token"
     t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "sign_in_count",        :default => 0, :null => false
-    t.integer  "failed_attempts",      :default => 0, :null => false
+    t.integer  "sign_in_count",                        :default => 0, :null => false
+    t.integer  "failed_attempts",                      :default => 0, :null => false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
@@ -631,8 +632,11 @@ ActiveRecord::Schema.define(:version => 20120228144316) do
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.datetime "remember_created_at"
+    t.datetime "reset_password_sent_at"
+    t.string   "api_key",                :limit => 48
   end
 
+  add_index "spree_users", ["email"], :name => "email_idx_unique", :unique => true
   add_index "spree_users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
   create_table "spree_variants", :force => true do |t|
