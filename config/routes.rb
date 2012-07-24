@@ -5,8 +5,8 @@ RailsdogRadio::Application.routes.draw do
   # If you would like to change where this engine is mounted, simply change the :at option to something different.
   #
   # We ask that you don't use the :as option here, as Spree relies on it being the default of "spree"
-  mount Spree::Core::Engine, :at => '/'
-          root :to => "spree/homepage#show"
+  
+  root :to => "spree/homepage#show"
 
   # redirect railsdogradio.com to the demo subdomain
   constraints(:host => /railsdogradio.com/) do
