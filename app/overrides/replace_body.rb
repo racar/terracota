@@ -7,6 +7,8 @@ Deface::Override.new(:virtual_path => %q{spree/layouts/spree_application},
         <header>
           <!--<%= link_to image_tag("store/logo.png", :width => "300", :height => "58", :alt => "Rails Dog Radio", :id => "logo"), root_url %>
           -->
+          <%= link_to image_tag("store/homepage/terralogo.jpg", :width => "300", :height => "58", :alt => "terracotta", :id => "logo"), root_url %>
+
           <form action="#" >
           </form>
           <%= form_tag products_url, :method => :get do %>
